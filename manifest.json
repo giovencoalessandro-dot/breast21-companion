@@ -1,0 +1,9 @@
+{
+  "name": "Breast21 Companion",
+  "short_name": "Breast21",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eef3f8",
+  "theme_color": "#143b5f"
+}
