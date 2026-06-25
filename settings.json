@@ -1,0 +1,367 @@
+{
+  "id": "breast21_first_meeting",
+  "title": "Breast21 First Customer Meeting",
+  "subtitle": "Pathologists & Oncologists · Export Markets",
+  "purpose": "Understand the account's current behaviour and decision criteria, qualify it, position Breast21 against the criteria they state, and secure one concrete next step.",
+  "startQuestion": "q_current_testing",
+  "questions": [
+    {
+      "id": "q_current_testing",
+      "section": "Open & Anchor",
+      "prompt": "Are you currently using a recurrence-risk / genomic signature test for early-stage HR+/HER2 breast cancer?",
+      "help": "After a couple of introduction questions, show the Breast21 features slide. This answer determines the interview branch.",
+      "type": "single",
+      "required": true,
+      "options": [
+        {
+          "label": "Yes, routinely",
+          "next": "q_tests_used",
+          "score": 3
+        },
+        {
+          "label": "Yes, but only for few patients",
+          "next": "q_why_not",
+          "score": 1
+        },
+        {
+          "label": "No",
+          "next": "q_why_not",
+          "score": 0
+        },
+        {
+          "label": "Unknown / unclear",
+          "next": "q_why_not",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "q_tests_used",
+      "section": "Branch A — They are testing",
+      "prompt": "Which recurrence-risk test(s) are you using, and since when?",
+      "help": "Capture Oncotype DX / MammaPrint / EndoPredict / Prosigna / other. Ask whether different tests are used for different situations, e.g. lobular carcinoma.",
+      "type": "textarea",
+      "next": "q_selection_basis"
+    },
+    {
+      "id": "q_selection_basis",
+      "section": "Branch A — They are testing",
+      "prompt": "Why was this specific test chosen over alternatives?",
+      "help": "Probe clinical evidence, guideline inclusion, price, reimbursement and turnaround time.",
+      "type": "multi",
+      "options": [
+        "Clinical evidence",
+        "Guideline inclusion",
+        "Price",
+        "Reimbursement",
+        "Turnaround time",
+        "Historical habit",
+        "Physician preference",
+        "Logistics / send-out pathway",
+        "Other"
+      ],
+      "next": "q_decision_makers"
+    },
+    {
+      "id": "q_decision_makers",
+      "section": "Branch A — They are testing",
+      "prompt": "Who is typically involved in selecting and approving the use of a recurrence-risk test?",
+      "type": "multi",
+      "options": [
+        "Oncologists",
+        "Pathologists",
+        "Molecular laboratory",
+        "Breast MDT",
+        "Hospital C-suite",
+        "Procurement",
+        "Payer / insurer",
+        "Other"
+      ],
+      "next": "q_annual_volume"
+    },
+    {
+      "id": "q_annual_volume",
+      "section": "Branch A — They are testing",
+      "prompt": "Approximately how many patients receive recurrence-risk testing annually at this institution?",
+      "type": "number",
+      "next": "q_eligible_patients"
+    },
+    {
+      "id": "q_eligible_patients",
+      "section": "Branch A — They are testing",
+      "prompt": "Are all eligible patients tested, or are there limitations or subpopulations?",
+      "help": "Examples: no reimbursement, local guidelines, only specific patient profiles.",
+      "type": "textarea",
+      "next": "q_current_barriers"
+    },
+    {
+      "id": "q_current_barriers",
+      "section": "Branch A — They are testing",
+      "prompt": "What limitations, frustrations, or barriers do you experience with your current testing approach?",
+      "type": "multi",
+      "options": [
+        "Turnaround time",
+        "Send-out / no local testing",
+        "Price",
+        "Reimbursement",
+        "Sample logistics",
+        "Tissue requirements",
+        "Administrative burden",
+        "Access inequity",
+        "No major issue",
+        "Other"
+      ],
+      "next": "q_cost_reimbursement"
+    },
+    {
+      "id": "q_cost_reimbursement",
+      "section": "Branch A — They are testing",
+      "prompt": "What does the test cost, who pays, and what percentage of tested patients are reimbursed?",
+      "help": "Capture government, private insurance, hospital budget, patient out-of-pocket, or mixed models.",
+      "type": "textarea",
+      "next": "q_specimen_optional"
+    },
+    {
+      "id": "q_specimen_optional",
+      "section": "Branch A — Pathologist optional",
+      "prompt": "Pathologist optional: does your lab have experience with micro- or macrodissection when needed?",
+      "help": "Specimen considerations mentioned in the guide: tumor tissue input, neoplastic cell content, removal of structures such as biopsy cavity or DCIS when needed.",
+      "type": "textarea",
+      "next": "q_min_evidence"
+    },
+    {
+      "id": "q_why_not",
+      "section": "Branch B — They are not testing, or very few patients",
+      "prompt": "Why are recurrence-risk tests not used, or used only for very few patients?",
+      "help": "Keep this open. If they name one barrier, ask what other barriers exist.",
+      "type": "textarea",
+      "next": "q_nonuse_barriers"
+    },
+    {
+      "id": "q_nonuse_barriers",
+      "section": "Branch B — They are not testing, or very few patients",
+      "prompt": "Which barriers are most relevant?",
+      "type": "multi",
+      "options": [
+        "No reimbursement",
+        "Price",
+        "Lack of local guideline support",
+        "Limited awareness",
+        "Low perceived clinical utility",
+        "Turnaround time",
+        "Send-out logistics",
+        "No institutional pathway",
+        "No molecular lab capacity",
+        "Other"
+      ],
+      "next": "q_inhouse_funding"
+    },
+    {
+      "id": "q_inhouse_funding",
+      "section": "Branch B — They are not testing, or very few patients",
+      "prompt": "Is there institutional funding that could cover an in-house test even where it would not cover a send-out test?",
+      "type": "textarea",
+      "next": "q_potential_volume"
+    },
+    {
+      "id": "q_potential_volume",
+      "section": "Branch B — They are not testing, or very few patients",
+      "prompt": "If barriers were solved, approximately how many eligible patients per year could be tested?",
+      "type": "number",
+      "next": "q_who_to_involve"
+    },
+    {
+      "id": "q_who_to_involve",
+      "section": "Branch B — They are not testing, or very few patients",
+      "prompt": "Who would need to be involved to establish or approve recurrence-risk testing?",
+      "type": "multi",
+      "options": [
+        "Oncologists",
+        "Pathologists",
+        "Molecular laboratory",
+        "Breast MDT",
+        "Hospital C-suite",
+        "Procurement",
+        "Payer / insurer",
+        "Other"
+      ],
+      "next": "q_min_evidence"
+    },
+    {
+      "id": "q_min_evidence",
+      "section": "Evidence & Switching",
+      "prompt": "What minimum evidence would you need to implement the Breast21 Assay in your hospital?",
+      "help": "Show the slide on planned studies: concordance study and validation study proving prognostic value.",
+      "type": "textarea",
+      "next": "q_concordance"
+    },
+    {
+      "id": "q_concordance",
+      "section": "Evidence & Switching",
+      "prompt": "Biocartis is aiming to demonstrate >90% concordance between Idylla Breast21 and Oncotype DX. Would this level be sufficient to support consideration of adoption?",
+      "type": "single",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "q_switch_factors",
+          "score": 3
+        },
+        {
+          "label": "No",
+          "next": "q_additional_evidence",
+          "score": 0
+        },
+        {
+          "label": "Maybe / depends",
+          "next": "q_additional_evidence",
+          "score": 1
+        },
+        {
+          "label": "Not sure",
+          "next": "q_additional_evidence",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "q_additional_evidence",
+      "section": "Evidence & Switching",
+      "prompt": "What additional evidence or data would be required?",
+      "type": "textarea",
+      "next": "q_switch_factors"
+    },
+    {
+      "id": "q_switch_factors",
+      "section": "Evidence & Switching",
+      "prompt": "Which factors would most strongly influence your decision to switch to the Idylla™ Breast21 Test?",
+      "type": "multi",
+      "options": [
+        "Concordance with Oncotype DX",
+        "Clinical validation / prognostic data",
+        "Predictive claim",
+        "Guideline inclusion",
+        "Regulatory status",
+        "Price",
+        "Reimbursement",
+        "Turnaround time",
+        "Local testing / workflow",
+        "Ease of use",
+        "Internal validation feasibility",
+        "Other"
+      ],
+      "next": "q_ruo"
+    },
+    {
+      "id": "q_ruo",
+      "section": "Evidence & Switching",
+      "prompt": "If Idylla Breast21 were initially available as a Research Use Only assay, how would that affect your interest?",
+      "type": "textarea",
+      "next": "q_ldt"
+    },
+    {
+      "id": "q_ldt",
+      "section": "Evidence & Switching",
+      "prompt": "Would your institution consider validating a RUO assay as a Laboratory Developed Test for clinical use? Why or why not?",
+      "type": "textarea",
+      "next": "q_close_regulatory"
+    },
+    {
+      "id": "q_close_regulatory",
+      "section": "Close the Meeting",
+      "prompt": "Summarize: what regulatory status is required for adoption?",
+      "type": "single",
+      "options": [
+        {
+          "label": "RUO acceptable with internal validation",
+          "next": "q_close_evidence",
+          "score": 3
+        },
+        {
+          "label": "IVD required",
+          "next": "q_close_evidence",
+          "score": 1
+        },
+        {
+          "label": "Local registration required",
+          "next": "q_close_evidence",
+          "score": 1
+        },
+        {
+          "label": "Guideline inclusion required",
+          "next": "q_close_evidence",
+          "score": 0
+        },
+        {
+          "label": "Unknown",
+          "next": "q_close_evidence",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "q_close_evidence",
+      "section": "Close the Meeting",
+      "prompt": "Summarize: what level of evidence is needed to support adoption?",
+      "type": "textarea",
+      "next": "q_close_concordance"
+    },
+    {
+      "id": "q_close_concordance",
+      "section": "Close the Meeting",
+      "prompt": "Summarize: what is the minimum concordance percentage they require?",
+      "type": "text",
+      "next": "q_close_price"
+    },
+    {
+      "id": "q_close_price",
+      "section": "Close the Meeting",
+      "prompt": "Summarize: what would be an acceptable or ideal price range?",
+      "type": "textarea",
+      "next": "q_customer_questions"
+    },
+    {
+      "id": "q_customer_questions",
+      "section": "Close the Meeting",
+      "prompt": "Do they have additional questions?",
+      "help": "If a question is not covered by the FAQ, save it also in 'Questions to Share'.",
+      "type": "textarea",
+      "next": "q_next_step"
+    },
+    {
+      "id": "q_next_step",
+      "section": "Close the Meeting",
+      "prompt": "What concrete next step was agreed before leaving?",
+      "type": "multi",
+      "options": [
+        "Follow-up meeting once concordance data is available",
+        "Introduction to lab director",
+        "Introduction to MDT",
+        "Introduction to procurement",
+        "Introduction to payer / reimbursement stakeholder",
+        "NDA discussion",
+        "Potential EAP customer",
+        "No next step",
+        "Other"
+      ],
+      "next": "q_next_people"
+    },
+    {
+      "id": "q_next_people",
+      "section": "Close the Meeting",
+      "prompt": "Who else in the institution should be in the next conversation?",
+      "type": "textarea",
+      "next": "q_final_notes"
+    },
+    {
+      "id": "q_final_notes",
+      "section": "Close the Meeting",
+      "prompt": "Final notes / meeting summary",
+      "type": "textarea",
+      "next": null
+    }
+  ],
+  "fieldNotes": [
+    "In several markets the two/three-week Oncotype DX turnaround is genuinely a non-issue.",
+    "If an oncologist will not switch without prospective data, near-term adoption will not happen. Site will likely wait until IVD availability."
+  ]
+}

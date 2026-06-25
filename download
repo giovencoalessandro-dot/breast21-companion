@@ -1,0 +1,32 @@
+[
+  {
+    "id": "faq_price",
+    "topic": "Pricing",
+    "question": "What will be the price of the Idylla Breast21 Assay?",
+    "answer": "The price has not yet been defined. It is expected to be lower than the Oncotype DX assay. A pricing study is currently underway, and more detailed information will be available closer to launch."
+  },
+  {
+    "id": "faq_same",
+    "topic": "Positioning",
+    "question": "Are the Oncotype DX assay and the Idylla Breast21 Assay really the same?",
+    "answer": "Oncotype DX and Idylla Breast21 use the same 21-gene panel and sample population. Idylla translates this into a fully automated, streamlined sample-to-result workflow, with the assay design and algorithm tailored for the platform. These adaptations still deliver the same Recurrence Score output."
+  },
+  {
+    "id": "faq_data",
+    "topic": "Data sharing",
+    "question": "When can we show the first data to customers?",
+    "answer": "By the end of July, Biocartis expects to begin sharing the first results with customers, and a slide deck will be available at that time. Until further notice, data may only be shared with customers who have signed an NDA with Biocartis. Additional data will be incorporated into the slide deck on a regular basis. Over time, as the dataset expands and the program is derisked, Biocartis anticipates that data sharing will no longer require an NDA."
+  },
+  {
+    "id": "faq_claim",
+    "topic": "Intended use",
+    "question": "Will the Idylla Breast21 IVD be intended for both prognostic and predictive use?",
+    "answer": "Yes. The current intention is for the Idylla Breast21 IVD to support both prognostic and predictive use. For the prognostic claim, an appropriate clinical cohort has already been identified and the necessary validation activities are being planned. For the predictive claim, Biocartis is still evaluating the optimal development and validation pathway and engaging with regulatory bodies to align on the most appropriate approach."
+  },
+  {
+    "id": "faq_concordance_study",
+    "topic": "Study setup",
+    "question": "What is the setup of the concordance study?",
+    "answer": "The concordance study is a retrospective, multi-site study involving more than 1,200 breast cancer samples. The study will compare Idylla Breast21 results with corresponding Oncotype DX results to assess concordance between the two assays. Multiple sites across the United States and Europe are participating. Testing is expected to begin in Fall 2026, with participating sites performing testing locally on their own samples. Results are expected to be compiled and submitted for publication in a peer-reviewed scientific journal."
+  }
+]
